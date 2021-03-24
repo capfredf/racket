@@ -116,7 +116,7 @@ In more detail, patterns match as follows:
             [else 'also-not-evaluated])])
        ]}
 
- @item{@racketidfont{_} --- matches anything, without binding any
+ @item{@indexed-racket[_] --- matches anything, without binding any
        identifiers.
 
        @examples[
@@ -367,7 +367,7 @@ In more detail, patterns match as follows:
         [_ 'no])
        ]}
 
- @item{@racket[(#,(racketidfont "app") _expr _pats ...)] --- applies
+ @item{@racket[(#,(indexed-racket app) _expr _pats ...)] --- applies
        @racket[_expr] to the value to be matched; each result of the
        application is matched against one of the @racket[_pats],
        respectively.
