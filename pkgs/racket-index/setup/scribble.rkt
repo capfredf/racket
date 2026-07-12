@@ -1390,6 +1390,7 @@
                         [v (load-doc/ensure-prefix doc)]
                         [dest-dir (pick-dest latex-dest doc)]
                         [fp (send renderer traverse (list v) (list dest-dir))]
+                        [v (car (send renderer traversed-parts (list v) fp))]
                         [ci (send renderer collect (list v) (list dest-dir) fp)]
                         ;; It's ok if cross-reference information isn't available
                         ;; at this point, but we can sometimes save another iteration
